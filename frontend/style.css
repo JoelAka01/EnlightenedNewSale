@@ -1,0 +1,444 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poller+One&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 0;
+  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 71%, 73%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: #E5E5E5;
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(0, 1%, 13%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --p-font-color: #B5B9BE;
+  /*========== Font and typography ==========*/
+  --body-font: "Montserrat", sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 4rem;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.30rem;
+  --h3-font-size: 3.5rem;
+  --h5-font-size: 2rem;
+  --normal-font-size: 62.5%;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --p-font: 1.4rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+  /*========== LAYOUT==========*/
+  /* --body-max-width:700px; */
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 1200px) {
+  :root {
+    --big-font-size: 6.4rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 3.5rem;
+    --normal-font-size: 62.5%;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+    --body-max-width: 120rem;
+    --p-font: 1.6rem;
+    --h5-font-size: 2.9rem;
+
+  }
+}
+
+/*========== Variables Dark theme ==========*/
+
+
+/*========== Button Dark/Light ==========*/
+
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--normal-font-size);
+
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section.section_title h1 {
+  font-size: 2.6rem;
+  margin: 0px;
+  color: #EBE789;
+  font-weight: 700;
+  text-align: center;
+  padding: 3.5rem 0;
+
+}
+
+section.section_title_left h1 {
+  font-size: 2.6rem;
+  margin: 0px;
+  color: #EBE789;
+  font-weight: 700;
+  padding: 3.5rem 0;
+
+}
+
+#title {
+
+  color: #EBE789;
+  font-weight: 700;
+  padding: 3.5rem 0;
+
+}
+
+p {
+  line-height: 24px;
+  color: #B5B9BE;
+  font-weight: 400;
+  font-family: poppins;
+}
+
+@media screen and (min-width: 700px) {
+  section.section_title h1 {
+    font-size: 3.6rem;
+    margin: 0px;
+    padding: 6rem 0;
+
+  }
+
+  section.section_title_left h1 {
+    font-size: 3.6rem;
+    margin: 0px;
+    padding: 6rem 0;
+    text-align: center;
+
+
+  }
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+/*==================== LAYOUT ====================*/
+.wrapper {
+  max-width: var(--body-max-width);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+
+    padding: 0 1rem;
+  }
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/*==================== TELEGRAM SECTION ====================*/
+
+/* LAYOUT */
+section.pourquoi_section .pourquoi_section_content {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+
+}
+
+section.pourquoi_section .pourquoi_section_content .left_col {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 34.1rem;
+}
+
+section.pourquoi_section .pourquoi_section_content h2 {
+  font-size: var(--h3-font-size);
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1100px) {
+
+  section.pourquoi_section .pourquoi_section_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  section.pourquoi_section .pourquoi_section_content .left_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+
+    width: 59rem;
+    gap: 6.7rem;
+
+  }
+
+  .pourquoi_section_content .right_col {
+    background: url("images/sonia-img.png");
+    width: 60.8rem;
+    height: 33.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pourquoi_section_content .right_col {
+    margin: 0 auto;
+    background: url("images/sonia-mobile.png");
+    width: 34.1rem;
+    height: 32.9rem;
+  }
+
+  section.pourquoi_section .pourquoi_section_content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  section.pourquoi_section .pourquoi_section_content {
+
+    max-width: 65rem;
+
+  }
+}
+
+.left_col a.button {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-family: poppins;
+  background: #910404;
+  padding: 1rem;
+  width: 23.9rem;
+  height: 4.7rem;
+  font-size: 2rem;
+  border-radius: .8rem;
+
+}
+
+/*==================== AVANTAGE  ====================*/
+.avantage_section_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+  /* gap: 3rem; */
+}
+
+.avantage_section_content .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  max-width: 22.9rem;
+  height: 21.3rem;
+}
+
+.avantage_section_content .item .svg {
+  width: 6.5rem;
+  height: 5.6rem;
+}
+
+.avantage_section_content .item:nth-child(1) .svg {
+  background: url("/frontend/asset/mixite.svg");
+  background-repeat: no-repeat;
+
+}
+
+.avantage_section_content .item:nth-child(2) .svg {
+  background: url("/frontend/asset/disponibilite.svg");
+  background-repeat: no-repeat;
+  height: 6.4rem;
+}
+
+.avantage_section_content .item:nth-child(3) .svg {
+  background: url("/frontend/asset/integriter.svg");
+  background-repeat: no-repeat;
+  width: 8rem;
+  height: 6rem;
+}
+
+
+
+
+
+@media screen and (min-width: 1100px) {
+  .avantage_section_content {
+    display: flex;
+    flex-direction: row;
+    gap: 17rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avantage_section_content p {
+    font-size: 1.4rem;
+    color: #F1F0EC;
+  }
+}
+
+/*==================== testimony  ====================*/
+.testimony_section_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 3rem;
+}
+
+.testimony_section_content .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  max-width: 34.3rem;
+  height: 36.5rem;
+  background: #171717;
+}
+
+.testimony_section_content .item .img {
+  width: 11.8rem;
+  height: 11.3rem;
+}
+
+.testimony_section_content .item p:before {
+  content: "“";
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 78px;
+  /* identical to box height */
+  text-align: center;
+  color: #2B2B2B;
+}
+
+
+
+.testimony_section_content .item:nth-child(1) .img {
+  background: url("/frontend/images/faby.png");
+  background-repeat: no-repeat;
+
+}
+
+.testimony_section_content .item:nth-child(2) .img {
+  background: url("/frontend/images/faby.png");
+  background-repeat: no-repeat;
+}
+
+.testimony_section_content .item:nth-child(3) .img {
+  background: url("/frontend/images/faby.png");
+  background-repeat: no-repeat;
+
+}
+
+
+
+
+
+@media screen and (min-width: 1100px) {
+  .testimony_section_content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimony_section_content p {
+    font-size: 1.4rem;
+    color: #F1F0EC;
+  }
+}
