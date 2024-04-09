@@ -3,13 +3,74 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>replit</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js" />
+
   <link href="/frontend/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+  <section class="hero_section">
+    <div class="wrapper">
+      <div class="hero_section_content">
+        <div class="left_col">
+          <div class="text">
+            <h1>
+              L’evement qui te faire voyager
+            </h1>
+            <p>
+              AFT est une entreprise qui organise des voyages à échelle internationale afin de réunir un ensemble de
+              personnes pour passer un moment de détente, de joie, de partage. C’est aussi à la fois un moment de créer
+              du contacte et enrichir sa culture générale à travers les voyages.
+            </p>
+          </div>
+          <div class="item-footer">
+            <form method="post" action="email">
+              <input name="email">
+              <a href="/comingsoon" target="_blank" class="button">
+                Rejoindre
+              </a>
+            </form>
+          </div>
+        </div>
+        <div class="right_col">
+        </div>
+      </div>
+    </div>
 
+  </section>
+  <section class="saison_section">
+    <section class="section_title">
+      <div class="wrapper">
+        <h1>NOS OFFRES</h1>
+      </div>
+    </section>
+    <div class="wrapper">
+      <div class="saison_section_content">
+        <card>
+          <div class="card_body">
+            <h1 slot="header">MAI</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </card>
+        <card>
+          <div class="card_body">
+            <h1 slot="header">JUIN</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </card>
+        <card>
+          <div class="card_body">
+            <h1 slot="header">HIVER</h1>
+            <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </card>
+      </div>
+    </div>
+    </div>
+  </section>
   <section class="pourquoi_section">
     <div class="wrapper">
       <div class="pourquoi_section_content">
@@ -19,7 +80,8 @@
               POURQUOI NOUS
             </h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur. A egestas semper neque dignissim et. Scelerisque tincidunt commodo
+              Lorem ipsum dolor sit amet consectetur. A egestas semper neque dignissim et. Scelerisque tincidunt
+              commodo
               aliquet a pharetra tristique nam et. Volutpat bibendum et commodo magna amet. Elementum tortor eleifend
               congue enim vel.
             </p>
@@ -36,7 +98,6 @@
     </div>
 
   </section>
-
   <section class="avantage_section">
     <div class="wrapper">
       <div class="avantage_section_content">
@@ -111,7 +172,7 @@
       </div>
     </div>
   </section>
-  <script src="script.js"></script>
+  <script src="/frontend/script.js"></script>
 </body>
 
 </html>

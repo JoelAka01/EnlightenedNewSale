@@ -31,7 +31,7 @@
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 4rem;
-  --h1-font-size: 2rem;
+  --h1-font-size: 3.2rem;
   --h2-font-size: 1.30rem;
   --h3-font-size: 3.5rem;
   --h5-font-size: 2rem;
@@ -57,7 +57,7 @@
 @media screen and (min-width: 1200px) {
   :root {
     --big-font-size: 6.4rem;
-    --h1-font-size: 2.5rem;
+    --h1-font-size: 3.2rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 3.5rem;
     --normal-font-size: 62.5%;
@@ -120,7 +120,7 @@ img {
 section.section_title h1 {
   font-size: 2.6rem;
   margin: 0px;
-  color: #EBE789;
+  color: #ffffff;
   font-weight: 700;
   text-align: center;
   padding: 3.5rem 0;
@@ -130,17 +130,16 @@ section.section_title h1 {
 section.section_title_left h1 {
   font-size: 2.6rem;
   margin: 0px;
-  color: #EBE789;
+  color: #ffffff;
   font-weight: 700;
   padding: 3.5rem 0;
 
 }
 
 #title {
-
-  color: #EBE789;
+  color: #ffffff;
   font-weight: 700;
-  padding: 3.5rem 0;
+  padding: 0;
 
 }
 
@@ -149,6 +148,44 @@ p {
   color: #B5B9BE;
   font-weight: 400;
   font-family: poppins;
+}
+
+section.section_title h1 {
+  font-size: 3.2rem;
+  margin: 0px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  padding: 35px 0;
+
+}
+
+section.section_title_left h1 {
+  font-size: 3.2rem;
+  margin: 0px;
+  color: #ffffff;
+  font-weight: 700;
+
+}
+
+
+
+@media screen and (min-width: 700px) {
+  section.section_title h1 {
+    font-size: 3.6rem;
+    margin: 0px;
+    padding: 6rem 0;
+
+  }
+
+  section.section_title_left h1 {
+    font-size: 3.6rem;
+    margin: 0px;
+    padding: 6rem 0;
+    text-align: center;
+
+
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -217,6 +254,100 @@ p {
   background-color: var(--body-color);
 }
 
+/*==================== HERO SECTION ====================*/
+
+.left_col h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--h1-font-size);
+  line-height: 48px;
+  color: #FFFF
+}
+
+.left_col p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--p-font);
+  line-height: 24px;
+  color: #B5B9BE;
+}
+
+.left_col input {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--p-font);
+  line-height: 24px;
+  background-color: #222121;
+  padding: 10px;
+  width: 380px;
+  height: 50px;
+  border-radius: .8rem;
+  border-color: #BBA3A3
+}
+
+.left_col form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero_section_content .left_col {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .hero_section_content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 3rem 0;
+
+  }
+
+  .left_col form {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .hero_section_content .right_col {
+    background: url("asset/hero-mobile.svg");
+    width: 33.8rem;
+    height: 33.2rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .hero_section_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 7rem 0;
+
+  }
+
+  .hero_section_content .left_col {
+    max-width: 570px;
+  }
+
+  .hero_section_content .right_col {
+    background: url("asset/hero.svg");
+    width: 62.9rem;
+    height: 57.2rem;
+  }
+}
+
 /*==================== TELEGRAM SECTION ====================*/
 
 /* LAYOUT */
@@ -231,6 +362,7 @@ section.pourquoi_section .pourquoi_section_content .left_col {
   flex-direction: column;
   gap: 4rem;
   max-width: 34.1rem;
+  align-items: center;
 }
 
 section.pourquoi_section .pourquoi_section_content h2 {
@@ -245,14 +377,14 @@ section.pourquoi_section .pourquoi_section_content h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 3rem;
+
   }
 
   section.pourquoi_section .pourquoi_section_content .left_col {
     display: flex;
     flex-direction: column;
     justify-content: baseline;
-
+    align-items: flex-start;
     width: 59rem;
     gap: 6.7rem;
 
@@ -283,22 +415,29 @@ section.pourquoi_section .pourquoi_section_content h2 {
   }
 
   section.pourquoi_section .pourquoi_section_content {
-
     max-width: 65rem;
-
   }
 }
 
 .left_col a.button {
   color: #FFFFFF;
-  font-weight: 500;
+  font-weight: 700;
   font-family: poppins;
   background: #910404;
   padding: 1rem;
-  width: 23.9rem;
+  width: 200px;
   height: 4.7rem;
   font-size: 2rem;
   border-radius: .8rem;
+
+}
+
+.left_col a.button {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
 }
 
@@ -347,17 +486,14 @@ section.pourquoi_section .pourquoi_section_content h2 {
   height: 6rem;
 }
 
-
-
-
-
 @media screen and (min-width: 1100px) {
   .avantage_section_content {
     display: flex;
     flex-direction: row;
     gap: 17rem;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    padding: 7rem 0;
   }
 
   .avantage_section_content p {
@@ -441,4 +577,89 @@ section.pourquoi_section .pourquoi_section_content h2 {
     font-size: 1.4rem;
     color: #F1F0EC;
   }
+}
+
+/*==================== Saisson  ====================*/
+.saison_section_content {
+  display: flex;
+  gap: 4.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 7rem;
+}
+
+
+
+@media screen and (min-width: 1100px) {
+  .saison_section_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+p {
+  line-height: 1.5em;
+}
+
+
+.saison_section card:nth-child(1) {
+  background: url('/frontend/images/mai.png');
+}
+
+.saison_section card:nth-child(2) {
+  background: url('/frontend/images/juin.png');
+}
+
+.saison_section card:nth-child(3) {
+  background: url('/frontend/images/hiver.png');
+}
+
+.saison_section card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 31.2rem;
+  height: 41.4rem;
+  object-fit: fill;
+  padding: 2.3rem;
+}
+
+.saison_section card h1 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  /* identical to box height */
+  color: #FFFFFF;
+  text-align: left;
+
+}
+
+.saison_section_content p {
+  display: none;
+}
+
+.saison_section card:hover p {
+  display: flex;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3rem;
+  /* identical to box height */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.saison_section card:hover,
+.saison_section card:hover h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #FFFFFF;
 }
